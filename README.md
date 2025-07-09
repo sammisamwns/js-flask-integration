@@ -19,6 +19,9 @@ project/
 │   └── index.html      # HTML file
 ├── app.py              # Flask backend
 ├── requirements.txt    # Python dependencies
+├── render.yaml         # Render deployment configuration
+├── runtime.txt         # Python version specification
+├── Procfile           # Process file for deployment
 └── README.md          # This file
 ```
 
@@ -84,4 +87,15 @@ project/
 
 - **Frontend:** HTML, JavaScript (Vanilla)
 - **Backend:** Python Flask
-- **CORS:** flask-cors for cross-origin requests 
+- **CORS:** flask-cors for cross-origin requests
+
+## Deployment
+
+This project is configured for deployment on Render.com with the following files:
+
+- **render.yaml**: Render service configuration
+- **runtime.txt**: Python version specification (3.11.0)
+- **Procfile**: Process definition for web service
+- **app.py**: Updated for production with proper host/port configuration
+
+The application automatically uses the PORT environment variable provided by Render and binds to all interfaces (0.0.0.0) for production deployment. 
